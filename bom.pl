@@ -12,13 +12,13 @@ if(read(FH, my $fread, 500)) {
     my $enc = guess_encoding($fread);
     if(ref($enc)) {
         if ($enc->name eq 'ascii') {
-            print "file is fine.\n";
+            print "Ascii.\n";
         }
         elsif ($enc->name eq 'UTF-16BE') {
-            print "Do something else\n";
+            print "UTF-16 = ???\n";
         }
         elsif ($enc->name eq 'UTF-32LE') {
-            print "Excel file\n";
+            print "UTF-32 = Excel file ?\n";
         }
 
         print "type: ",$enc->name,"\n";
